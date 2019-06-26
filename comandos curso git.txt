@@ -279,6 +279,56 @@ Date:   Wed Jun 26 10:08:02 2019 -0300
 
 marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (design)
 $
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (master)
+$ git checkout design
+Switched to branch 'design'
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (design)
+$ git push origin design
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 649 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'design' on GitHub by visiting:
+remote:      https://github.com/sampaiolyrio/curso-git/pull/new/design
+remote:
+To https://github.com/sampaiolyrio/curso-git.git
+ * [new branch]      design -> design
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (design)
+$ git push -u origin design
+Branch design set up to track remote branch design from origin.
+Everything up-to-date
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (design)
+$ git branch -r
+  origin/design
+  origin/master
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (design)
+$ git branch
+* design
+  master
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (design)
+$ git pull
+Already up-to-date.
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (design)
+$ git branch -t design origin/design
+fatal: A branch named 'design' already exists.
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (design)
+$ git checkout design
+Already on 'design'
+Your branch is up-to-date with 'origin/design'.
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (design)
+$
+
 
 
 
