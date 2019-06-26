@@ -327,7 +327,17 @@ Already on 'design'
 Your branch is up-to-date with 'origin/design'.
 
 marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (design)
-$
+$ git status
+On branch design
+Your branch is up-to-date with 'origin/design'.
+nothing to commit, working directory clean
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (design)
+$ git checkout -b desenvolvimento
+Switched to a new branch 'desenvolvimento'
+
+
+
 
 
 
