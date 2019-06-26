@@ -232,4 +232,58 @@ marcos.lyrio@TRT176757 MINGW64 ~/Documents
 $ cd AndroidStudioProjects/
 
 
+-------------------------------------------------------------------------------
+Aula 4
+------------------------------------------------------------------------------
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (master)
+$ git branch
+* master
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (master)
+$ git branch design
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (master)
+$ git checkout design
+Switched to branch 'design'
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (design)
+$ ls
+comandos curso git.txt  index.hmtl
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (design)
+$ ll
+total 9
+-rw-r--r-- 1 marcos.lyrio 1049089 6958 jun 26 11:57 comandos curso git.txt
+-rw-r--r-- 1 marcos.lyrio 1049089  180 jun 26 10:11 index.hmtl
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (design)
+$ git log
+commit 69be8f9ccc87e98087695549d4587624f3a9c0f9
+Author: Marcos Lyrio <sampaiolyrio@hotmail.com<U+009B>>
+Date:   Wed Jun 26 12:06:05 2019 -0300
+
+    adição do arquivo de comandos utilizados no curso
+
+commit 36273ae5e084aea84c5e157cb02f807fbe2d7406
+Author: Marcos Lyrio <sampaiolyrio@hotmail.com<U+009B>>
+Date:   Wed Jun 26 10:14:20 2019 -0300
+
+    alterção html5
+
+commit 4649b6cd039caa9208a5c40e4fe34621c2d75000
+Author: Marcos Vinicius Sampaio Lyrio <marcos.lyrio@trtrio.gov.br>
+Date:   Wed Jun 26 10:08:02 2019 -0300
+
+    Criando o projeto
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (design)
+$
+
+
+
+
+
+
+
 
