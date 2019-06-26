@@ -1,0 +1,235 @@
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (master)
+$ git status
+On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (master)
+$ ls
+index.hmtl
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (master)
+$ git ls-files
+
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (master)
+$ git add index.hmtl
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   index.hmtl
+
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (master)
+$ git commit -m "Criando o projeto"
+[master (root-commit) 4649b6c] Criando o projeto
+ Committer: Marcos Vinicius Sampaio Lyrio <marcos.lyrio@trtrio.gov.br>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 6 insertions(+)
+ create mode 100644 index.hmtl
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (master)
+$ git config user.name "Marcos Lyrio"
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (master)
+$ git config user.email "sampaiolyrio@hotmail.com"
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (master)
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index.hmtl
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (master)
+$ git commit
+On branch master
+Changes not staged for commit:
+        modified:   index.hmtl
+
+no changes added to commit
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index.hmtl
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (master)
+$ git add index.hmtl
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (master)
+$ git commit -m "alterção html5"
+[master 36273ae] alterção html5
+ 1 file changed, 9 insertions(+), 5 deletions(-)
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (master)
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (master)
+$ git log
+commit 36273ae5e084aea84c5e157cb02f807fbe2d7406
+Author: Marcos Lyrio <sampaiolyrio@hotmail.com<U+009B>>
+Date:   Wed Jun 26 10:14:20 2019 -0300
+
+    alterção html5
+
+commit 4649b6cd039caa9208a5c40e4fe34621c2d75000
+Author: Marcos Vinicius Sampaio Lyrio <marcos.lyrio@trtrio.gov.br>
+Date:   Wed Jun 26 10:08:02 2019 -0300
+
+    Criando o projeto
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (master)
+$ git whatchanged
+commit 36273ae5e084aea84c5e157cb02f807fbe2d7406
+Author: Marcos Lyrio <sampaiolyrio@hotmail.com<U+009B>>
+Date:   Wed Jun 26 10:14:20 2019 -0300
+
+    alterção html5
+
+:100644 100644 e5825e8... 070ac85... M  index.hmtl
+
+commit 4649b6cd039caa9208a5c40e4fe34621c2d75000
+Author: Marcos Vinicius Sampaio Lyrio <marcos.lyrio@trtrio.gov.br>
+Date:   Wed Jun 26 10:08:02 2019 -0300
+
+    Criando o projeto
+
+:000000 100644 0000000... e5825e8... A  index.hmtl
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (master)
+$ git whatchanged -p
+commit 36273ae5e084aea84c5e157cb02f807fbe2d7406
+Author: Marcos Lyrio <sampaiolyrio@hotmail.com<U+009B>>
+Date:   Wed Jun 26 10:14:20 2019 -0300
+
+    alterção html5
+
+diff --git a/index.hmtl b/index.hmtl
+index e5825e8..070ac85 100644
+--- a/index.hmtl
++++ b/index.hmtl
+@@ -1,6 +1,10 @@
+-<html>
+-       <head>
+-       </head>
+-       <body>
+-       </body>
++<!doctype html>
++<html lang="pt-BR">
++<head>
++    <meta charset="UTF-8">
++    <title>Uma P<E1>gina HTML5 B<E1>sica</title>
++</head>
++<body>
++<!-- conte<FA>do da p<E1>gina -->
++</body>
+ </html>
+\ No newline at end of file
+
+commit 4649b6cd039caa9208a5c40e4fe34621c2d75000
+Author: Marcos Vinicius Sampaio Lyrio <marcos.lyrio@trtrio.gov.br>
+Date:   Wed Jun 26 10:08:02 2019 -0300
+
+    Criando o projeto
+
+diff --git a/index.hmtl b/index.hmtl
+new file mode 100644
+index 0000000..e5825e8
+--- /dev/null
++++ b/index.hmtl
+@@ -0,0 +1,6 @@
++<html>
++       <head>
++       </head>
++       <body>
++       </body>
++</html>
+\ No newline at end of file
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (master)
+$ git remote
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (master)
+$ git remote add origin https://github.com/sampaiolyrio/curso-git.git
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (master)
+$ git remote
+origin
+
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (master)
+$ git config --global http.proxy http://marcos.lyrio:'*****'@bravo.trtrio.gov.br:8080
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (master)
+$ git push origin master
+fatal: unable to access 'https://github.com/sampaiolyrio/curso-git.git/': SSL certificate problem: unable to get local issuer certificate
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (master)
+$ git config --global http.sslVerify false
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (master)
+$ git push origin master
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (6/6), 630 bytes | 0 bytes/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/sampaiolyrio/curso-git.git
+ * [new branch]      master -> master
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents/curso-git (master)
+$ cd ..
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents
+$ git clone https://github.com/sampaiolyrio/AndroidStudioProjects.git
+Cloning into 'AndroidStudioProjects'...
+remote: Enumerating objects: 340, done.
+Receiving obremote: Total 340 (delta 0), reused 0 jects(delta 0), pack-reused 340
+Receiving objects: 100% (340/340), 218.25 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (100/100), done.
+Checking connectivity... done.
+
+marcos.lyrio@TRT176757 MINGW64 ~/Documents
+$ cd AndroidStudioProjects/
+
+
+
